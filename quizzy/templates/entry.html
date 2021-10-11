@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="enter-name">
+    <div class="grid-100">
+      <h3> {{the_title}}</h3>
+    </div>
+    <div class="grid-100">
+        <img src="/static/img/quiz.jpg" class="logo" />
+    </div>
+    <div class="grid-100">
+        <form action= '{{ url_for('choose_category')}}' method="POST">
+            <label>Nickname:</label>
+            <input type="text" name="nickname" value="" autofocus>
+            <input type="submit" value="Ready, go!">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %} the_title {% endblock %}
+
+{% block body %}
+
+<div class="enter-name">
+    <div class="grid-100">
+      <h1> Hi, {{nickname}} !</h1>
+      <h3> {{the_title}}</h3>
+    </div>
+    <div class="grid-100">
+
+    <form method = 'POST'  action = '{{ url_for('quiz')}}'>
+        <p><input value= "PYTHON" type= 'submit' name = 'python'></p>
+        <p><input value= "SQL" type= 'submit' name = 'sql'></p>
+        <p><input value= "ENGLISH" type= 'submit' name = 'English'></p>
+    </form>
+</div>
+
+{% endblock %}

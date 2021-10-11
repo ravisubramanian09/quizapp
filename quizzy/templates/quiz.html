@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} the_title {% endblock %}
+
+{% block body %}
+
+<div class="enter-name">
+    <div class="grid-100">
+        <h3> Q{{session['time']}}: {{the_question}}</h3>
+    </div>
+    <div class="grid-100">
+
+    <form method = 'POST' action = '{{url_for('check_answer')}}'>
+        <p><input value= "A. {{a}}" type= 'SUBMIT' name = 'A'></p>
+        <p><input value= "B. {{b}}" type= 'SUBMIT' name = 'B'></p>
+        <p><input value="C. {{c}}" type= 'SUBMIT' name = 'C'></p>
+        <p><input value="D. {{d}}" type= 'SUBMIT' name = 'D'></p>
+    </form>
+    </div>
+</div>
+
+{% endblock %}
